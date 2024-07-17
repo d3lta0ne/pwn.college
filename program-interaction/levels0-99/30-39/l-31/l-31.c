@@ -5,8 +5,8 @@
 #include <sys/wait.h>   // For wait() and related macros
 
 void pwncollege () {
-    char *argv[] = {"/challenge/embryoio_level30", NULL};  // Argument vector
-    execve("/challenge/embryoio_level30", argv, NULL);
+    char *argv[] = {"/challenge/embryoio_level31","uzgirkzmoo", NULL};
+    execve("/challenge/embryoio_level31", argv, NULL);
     exit(0);
 }
 
@@ -14,9 +14,11 @@ int main (int argc, char argv[]) {
 	pid_t cpid;
 
 	if (fork() == 0) {
+        // Child process
 		pwncollege();
 	}
 	else {
+        // Parent process
 		cpid = wait(NULL);
 	}
 
