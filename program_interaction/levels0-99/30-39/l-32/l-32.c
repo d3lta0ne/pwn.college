@@ -1,11 +1,11 @@
 #include <stdio.h>      // For standard input/output functions
 #include <stdlib.h>     // For exit(), NULL, setenv()
-#include <unistd.h>     // For fork(), execve(), getpid()
+#include <unistd.h>     // For fork(), execve(), getpid() --- to get rid of implicit declaration warning
 #include <sys/types.h>  // For data types used in system calls (e.g., pid_t)
 #include <sys/wait.h>   // For wait() and related macros
 
 // Option 1: 
-// using the setenv() and environ variable
+// using the setenv()
 
 void pwncollege()
 {
