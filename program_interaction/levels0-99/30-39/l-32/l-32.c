@@ -4,15 +4,14 @@
 #include <sys/types.h>  // For data types used in system calls (e.g., pid_t)
 #include <sys/wait.h>   // For wait() and related macros
 
-// Option 1: 
-// using the setenv()
+// Using the setenv()
 
 void pwncollege()
 {
     extern char **environ;
     char *argv[] = {"/challenge/embryoio_level32", NULL};
     setenv("mrsqev", "oaxcmkzbmf", 1);
-    execve("/challenge/embryoio_level32", argv, NULL);
+    execve("/challenge/embryoio_level32", argv, environ);
     exit(0);
 }
 
