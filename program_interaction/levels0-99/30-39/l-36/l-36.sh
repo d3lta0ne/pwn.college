@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/challenge/run cat
+/challenge/run /bin/cat
