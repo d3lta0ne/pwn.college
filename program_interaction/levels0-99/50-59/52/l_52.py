@@ -1,7 +1,7 @@
 import subprocess
 
 def createPassword():
-    with open('password', 'w') as file:
+    with open('password', 'w', encoding="utf-8") as file:
         file.write("pslelrml")
 
 def main():
