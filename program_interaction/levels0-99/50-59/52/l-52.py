@@ -1,8 +1,13 @@
 import subprocess
 
+def createPassword():
+    with open('password', 'w') as file:
+        file.write("pslelrml")
+
 def main():
-    p1 = subprocess.Popen(['/challenge/run'], stdout=subprocess.PIPE, text=True)
-    p2 = subprocess.Popen(['/run/workspace/bin/cat','pslelrml','-'], stdin=p1.stdout, stdout=subprocess.PIPE, text=True)
+    createPassword()
+    p1 = subprocess.Popen(['/bin/cat','password','-'], stdout=subprocess.PIPE, text=True)
+    p2 = subprocess.Popen(['/challenge/run'], stdin=p1.stdout, stdout=subprocess.PIPE, text=True)
     p1.stdout.close()
     output, _ = p2.communicate()
     print(output)
