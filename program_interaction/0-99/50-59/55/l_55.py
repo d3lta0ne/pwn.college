@@ -1,3 +1,4 @@
+#!/bin/python3
 """Solution for pwn.college l-55 Program Interaction"""
 import subprocess
 
