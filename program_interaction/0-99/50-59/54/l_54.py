@@ -9,7 +9,6 @@ def main():
     p1.stdout.close()
     output, _ = p2.communicate()
     print(output)
-    return
 
 if __name__ == "__main__":
     main()
