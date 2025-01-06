@@ -1,4 +1,4 @@
-# S (https://pwn.college/linux-luminarium/users/#challenges-header-2)
+# Other Users With SU (https://pwn.college/linux-luminarium/users/#challenges-header-2)
 
 ## Table of Contents
 
