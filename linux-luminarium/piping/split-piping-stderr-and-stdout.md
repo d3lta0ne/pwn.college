@@ -23,5 +23,9 @@ Go get the flag!
 
 ## Steps
 
+```bash
+/challenge/hack 2> >(/challenge/the) | /challenge/planet 
+```
 
 ## Solution
+pwn.college{8cmI-ENWCywJZgFr3BfWcv1R2DE.dFDNwYDL3MTM3QzW}
