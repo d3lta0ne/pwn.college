@@ -12,4 +12,9 @@ Read the output of the `/challenge/run` command directly into a variable called 
 
 ## Steps
 
+```bash
+PWN=$(/challenge/run); echo $PWN
+```
+
 ## Solution
+pwn.college{oNioW4ZbEE9E4lV1EOlHZ_aHKK7.dVzN0UDL3MTM3QzW}
