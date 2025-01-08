@@ -8,4 +8,4 @@ Create a file using `touch rax-challenge.s` and then type `move rax, 60` into th
 
 # Solution
 
-pwn.college{IUlQDRvAxK5Vaz-0pROqm69Hhu\_.dNDN4UDL3MTM3QzW}
+pwn.college{IUlQDRvAxK5Vaz-0pROqm69Hhu_.dNDN4UDL3MTM3QzW}
