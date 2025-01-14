@@ -1,4 +1,4 @@
-# Using SUDO (https://pwn.college/linux-luminarium/users/#challenges-header-2)
+# Using SUDO (https://pwn.college/linux-luminarium/users/#challenges-header-4)
 
 ## Table of Contents
 
