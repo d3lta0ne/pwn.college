@@ -25,7 +25,7 @@ cat /flag
 
 ### Notes
 
-It is important to ensure that your home directory is at the start of the `$PATH` or else the actual rm binary will be selected and the flag will be removed. We use `$HOME:$PATH` as `~:$PATH` might not alwasy be interpreted correctly in all shells.
+It is important to ensure that your home directory is at the start of the `$PATH` or else the actual rm binary will be selected and the flag will be removed. Setting the path to `PATH="$PATH:$HOME"` will not work. We use `$HOME:$PATH` as `~:$PATH` might not alwasy be interpreted correctly in all shells.
 
 ## Solution
 
