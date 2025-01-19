@@ -8,12 +8,19 @@
 
 ## Problem
 
-This level's `/challenge/run` will run the win command via its bare name, but this command exists in the `/challenge/more_commands/` directory, which is not initially in the PATH. The win command is the only thing that `/challenge/run` needs, so you can just overwrite PATH with that one directory.
+Previously, the win command that `/challenge/run` executed was stored in `/challenge/more_commands`. This time, win does not exist! Recall the final level of Chaining Commands, and make a shell script called `win`, add its location to the PATH, and enable `/challenge/run` to find it!
 
 ## Steps
 
-We overwrite the PATH variable by using the following command. `PATH=/challenge/more_commands/`. We then get the flag by running `/challenge/run`.
+We add our home directory where we create the win command to the PATH variable by using the following command: `export PATH=~:$PATH`. After that we create our binary named win and make it executable. `touch ~/win; chmod +x ~/win` Ensure that our crafted binary attetmpts to read the contents of `/flag`. We then get the flag by running `/challenge/run`.
+
+### win
+
+```bash
+#/bin/bash
+cat /flag
+```
 
 ## Solution
 
-pwn.college{ks6DawWfxSrhlV66g7C4XgCK_i0.dVzNyUDL3MTM3QzW}
+pwn.college{YeNeiC32zsur1BUFshL0pMQuQcC.dZzNyUDL3MTM3QzW}
