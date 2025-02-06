@@ -10,12 +10,12 @@ This level assumes a passing familiarity with SQL, which you can develop in the 
 Anyways, go and bypass this authentication to log in as the admin user and get the flag!
 ## Steps
 
-
 ```bash
-
+curl http://challenge.localhost:80?session_user=admin
 ```
 
 ## Solution
 
 ```
+pwn.college{cI53l7vCqNxgZ5PFssg58Weoz6a.dlDOzMDL3MTM3QzW}
 ```
