@@ -23,4 +23,4 @@ curl -v "http://challenge.localhost:80/task?filepath=$url_encoded_path"
 
 ## Solution
 
-pwn.college{MI6AN2olIR0_pU3HGXTN9UR4gZ_.ddjN1YDL3MTM3QzW}
+`pwn.college{MI6AN2olIR0_pU3HGXTN9UR4gZ_.ddjN1YDL3MTM3QzW}`
