@@ -1,5 +1,4 @@
 import random
-import os
 
 def generate_expression(depth):
     if depth == 0:
