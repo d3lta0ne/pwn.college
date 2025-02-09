@@ -16,8 +16,6 @@ We start by creating a simple assembly program (`touch ~/solution.s`).After this
 
 We then pass `solution` as an argument to `/challenge/run` using `/challenge/run solution`.
 
-
-
 ### solution.s
 
 ```nasm
