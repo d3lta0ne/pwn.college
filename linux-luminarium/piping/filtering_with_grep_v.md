@@ -13,8 +13,8 @@ In this challenge, `/challenge/run` will output the flag to stdout, but it will 
 ## Steps
 
 ```bash
-/challenge/hack 2> >(/challenge/the) | /challenge/planet 
+/challenge/run | grep -v DECOY
 ```
 
 ## Solution
-pwn.college{8cmI-ENWCywJZgFr3BfWcv1R2DE.dFDNwYDL3MTM3QzW}
+pwn.college{gQi16xYhqmdJfkECM4ElMY2qSTA.QX4ETM3EDL3MTM3QzW}
