@@ -15,6 +15,14 @@ After running nmap we see that the host open for us is `10.0.128.73` with the `E
 nmap -Pn -n -p 31337 --open -T5 --min-rate 5000 10.0.0.0/16
 ```
 
+### Potential One-Liner
+```bash
+#!/bin/bash
+nmap -Pn -n -p 31337 --open -T5 --min-rate 5000 10.0.0.0/16 -oG - \
+  | awk '/31337\/open/{print $2}' \
+  | xargs -I {} nc {} 31337
+```
+
 ## Solution
 
 ```
