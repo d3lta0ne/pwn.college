@@ -11,13 +11,15 @@ In this challenge though, you need to send a message to the remote host. If you 
 
 ## Steps
 
+After starting the challenge and switching to host `10.0.0.1` by running `/challenge/run` you are able to run the following command to complete the challenge.
+
 ```bash
 #!/bin/bash
-
+echo "Hello, World!" | nc 10.0.0.2 31337
 ```
 
 ## Solution
 
 ```
-
+pwn.college{4eizz2ufZ-WKkv7FcL28VL5fxQo.QX1IDM2EDL3MTM3QzW}
 ```
